@@ -82,42 +82,10 @@ More sophisticated attacks may allow the attacker to:
 
 # System Data Flow Diagram
 
-```mermaid
-flowchart LR
+![DFD Support Portal](student_sql.png)
 
-User[Student or Faculty User]
+[Download the Threat Model](StudentSystem.tm7)
 
-WebApp((Student Portal Web Application))
-
-StudentDB[(Student Database)]
-LibraryDB[(Library Database)]
-
-User -- HTTP request --> WebApp
-
-WebApp -- SQL query --> StudentDB
-WebApp -- SQL query --> LibraryDB
-
-StudentDB -- query results --> WebApp
-LibraryDB -- query results --> WebApp
-
-WebApp -- response --> User
-```
-
----
-
-# Trust Boundary
-
-A critical trust boundary exists between:
-
-```
-User Browser → Web Application
-```
-
-User input received from HTTP requests must be treated as **untrusted data**.
-
-Failure to validate this input can allow attackers to inject malicious SQL commands.
-
----
 
 # Part 1 – Threat Elicitation
 
