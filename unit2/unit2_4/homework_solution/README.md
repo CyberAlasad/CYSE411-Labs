@@ -232,7 +232,6 @@ if (amount <= 0)
 
 
 ## 🛡️ Defense-in-Depth Applied
-===============================
 
 This solution uses multiple layers:
 
@@ -247,6 +246,7 @@ This solution uses multiple layers:
 This solution uses multiple layers:
 
 
+---
 
 ## 🧠 Secure Coding Mindset
 
